@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "SpaciTech | Your personal space",
+  title: "SpaciMore | Your personal space",
   description: "A quieter space to make room for what matters.",
 };
 

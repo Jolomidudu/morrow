@@ -27,7 +27,7 @@ async function DashboardContent() {
   return (
     <main className="dashboard-shell">
       <header className="dashboard-header">
-        <Link className="brand-mark" href="/" aria-label="SpaciTech home">
+        <Link className="brand-mark" href="/" aria-label="SpaciMore home">
           <span className="brand-icon"><Sprout size={19} strokeWidth={1.8} /></span>
           <span>Spaci</span>
         </Link>

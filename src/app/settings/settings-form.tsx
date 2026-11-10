@@ -129,9 +129,9 @@ export default function SettingsForm({ canDeleteAccount, email: initialEmail, fu
   return (
     <main className="dashboard-shell settings-shell">
       <header className="dashboard-header">
-        <Link className="brand-mark" href="/dashboard" aria-label="SpaciTech dashboard">
+        <Link className="brand-mark" href="/dashboard" aria-label="SpaciMore dashboard">
           <span className="brand-icon"><Sprout size={19} strokeWidth={1.8} /></span>
-          <span>SpaciTech</span>
+          <span>SpaciMore</span>
         </Link>
         <nav className="dashboard-actions" aria-label="Account navigation">
           <Link className="dashboard-action" href="/dashboard"><ArrowLeft aria-hidden="true" size={16} />Dashboard</Link>
