@@ -1,4 +1,4 @@
-# Morrow
+# SpaciTech
 
 A Next.js App Router authentication starter using Supabase Auth and cookie-backed server sessions.
 

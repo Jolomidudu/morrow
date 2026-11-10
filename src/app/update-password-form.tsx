@@ -35,9 +35,9 @@ export default function UpdatePasswordForm() {
   return (
     <main className="auth-shell">
       <section className="auth-main">
-        <Link className="brand-mark" href="/" aria-label="Morrow home">
+        <Link className="brand-mark" href="/" aria-label="SpaciTech home">
           <span className="brand-icon"><Sprout size={19} strokeWidth={1.8} /></span>
-          <span>Morrow</span>
+          <span>SpaciTech</span>
         </Link>
         <div className="auth-content">
           <p className="eyebrow">ONE LAST STEP</p>
@@ -66,7 +66,7 @@ export default function UpdatePasswordForm() {
           </form>
           {!isConfigured && <p className="setup-note">Add your Supabase URL and publishable key to <code>.env.local</code> to enable authentication.</p>}
         </div>
-        <span className="eyebrow">© MORROW</span>
+        <span className="eyebrow">© SpaciTech</span>
       </section>
       <aside className="auth-aside" aria-hidden="true">
         <span className="aside-kicker">A quieter kind of progress</span>

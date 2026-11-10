@@ -27,9 +27,9 @@ async function DashboardContent() {
   return (
     <main className="dashboard-shell">
       <header className="dashboard-header">
-        <Link className="brand-mark" href="/" aria-label="Morrow home">
+        <Link className="brand-mark" href="/" aria-label="SpaciTech home">
           <span className="brand-icon"><Sprout size={19} strokeWidth={1.8} /></span>
-          <span>Morrow</span>
+          <span>Spaci</span>
         </Link>
         <form action={signOut}>
           <button className="text-button" type="submit">Sign out</button>

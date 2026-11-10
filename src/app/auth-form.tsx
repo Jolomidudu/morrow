@@ -10,7 +10,7 @@ type AuthMode = "signin" | "signup" | "reset";
 
 const modeCopy: Record<AuthMode, { title: string; description: string; button: string }> = {
   signin: {
-    title: "Welcome To Morrow",
+    title: "Welcome To SpaciTech",
     description: "Pick up where you left off.",
     button: "Sign in",
   },
@@ -97,9 +97,9 @@ export default function AuthForm() {
   return (
     <main className="auth-shell">
       <section className="auth-main">
-        <Link className="brand-mark" href="/" aria-label="Morrow home">
+        <Link className="brand-mark" href="/" aria-label="SpaciTech home">
           <span className="brand-icon"><Sprout size={19} strokeWidth={1.8} /></span>
-          <span>Morrow</span>
+          <span>SpaciTech</span>
         </Link>
 
         <div className="auth-content">
@@ -203,10 +203,10 @@ export default function AuthForm() {
           )}
         </div>
 
-        <span className="eyebrow">© MORROW</span>
+        <span className="eyebrow">© SpaciTech</span>
       </section>
 
-      <aside className="auth-aside" aria-label="Morrow">
+      <aside className="auth-aside" aria-label="SpaciTech">
         <span className="aside-kicker">A quieter kind of progress</span>
         <div className="artwork" aria-hidden="true">
           <span className="artwork-leaf" />
