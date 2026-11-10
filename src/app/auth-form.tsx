@@ -12,12 +12,12 @@ const modeCopy: Record<AuthMode, { title: string; description: string; button: s
   signin: {
     title: "Welcome To SpaciTech",
     description: "Pick up where you left off.",
-    button: "Sign in",
+    button: "Sign In",
   },
   signup: {
     title: "A fresh beginning",
     description: "Create an account to find your space here.",
-    button: "Create account",
+    button: "Create Account",
   },
   reset: {
     title: "A way back in",
