@@ -1,5 +1,5 @@
 import { Suspense } from "react";
-import { Mail, Sprout } from "lucide-react";
+import { Mail, Settings, Sprout } from "lucide-react";
 import Link from "next/link";
 import { redirect } from "next/navigation";
 import { signOut } from "@/app/actions";
@@ -31,9 +31,15 @@ async function DashboardContent() {
           <span className="brand-icon"><Sprout size={19} strokeWidth={1.8} /></span>
           <span>Spaci</span>
         </Link>
-        <form action={signOut}>
-          <button className="text-button" type="submit">Sign out</button>
-        </form>
+        <nav className="dashboard-actions" aria-label="Account navigation">
+          <Link className="dashboard-action" href="/settings">
+            <Settings aria-hidden="true" size={16} />
+            Settings
+          </Link>
+          <form action={signOut}>
+            <button className="text-button" type="submit">Sign out</button>
+          </form>
+        </nav>
       </header>
       <section className="dashboard-content">
         <p className="eyebrow">YOUR SPACE</p>

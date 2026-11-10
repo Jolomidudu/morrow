@@ -1,6 +1,6 @@
 "use client";
 
-import { ArrowRight, LoaderCircle, Sprout } from "lucide-react";
+import { ArrowRight, Eye, EyeOff, LoaderCircle, Sprout } from "lucide-react";
 import { FormEvent, useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
@@ -13,6 +13,7 @@ const isConfigured = Boolean(
 export default function UpdatePasswordForm() {
   const router = useRouter();
   const [password, setPassword] = useState("");
+  const [isPasswordVisible, setIsPasswordVisible] = useState(false);
   const [message, setMessage] = useState("");
   const [isLoading, setIsLoading] = useState(false);
 
@@ -44,19 +45,32 @@ export default function UpdatePasswordForm() {
           <h1 className="auth-title display-type">Choose a new password</h1>
           <p className="auth-description">Make it something only you know.</p>
           <form className="auth-form" onSubmit={handleSubmit}>
-            <label className="field-label">
-              New password
-              <input
-                autoComplete="new-password"
-                className="field-input"
-                minLength={8}
-                onChange={(event) => setPassword(event.target.value)}
-                placeholder="At least 8 characters"
-                required
-                type="password"
-                value={password}
-              />
-            </label>
+            <div className="password-field">
+              <label className="field-label" htmlFor="new-password">New password</label>
+              <div className="password-control">
+                <input
+                  autoComplete="new-password"
+                  className="field-input"
+                  id="new-password"
+                  minLength={8}
+                  onChange={(event) => setPassword(event.target.value)}
+                  placeholder="At least 8 characters"
+                  required
+                  type={isPasswordVisible ? "text" : "password"}
+                  value={password}
+                />
+                <button
+                  aria-label={isPasswordVisible ? "Hide password" : "Show password"}
+                  aria-pressed={isPasswordVisible}
+                  className="password-toggle"
+                  onClick={() => setIsPasswordVisible((visible) => !visible)}
+                  title={isPasswordVisible ? "Hide password" : "Show password"}
+                  type="button"
+                >
+                  {isPasswordVisible ? <EyeOff aria-hidden="true" size={18} /> : <Eye aria-hidden="true" size={18} />}
+                </button>
+              </div>
+            </div>
             {message && <p className="form-message" role="alert">{message}</p>}
             <button className="primary-button" disabled={isLoading || !isConfigured} type="submit">
               {isLoading ? <LoaderCircle aria-hidden="true" className="animate-spin" size={17} /> : null}

@@ -364,10 +364,118 @@ body {
   border-bottom: 1px solid var(--line);
 }
 
+.dashboard-actions {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.dashboard-action {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  color: #42644e;
+  font-size: 13px;
+  font-weight: 650;
+  text-decoration: none;
+}
+
+.dashboard-action:hover {
+  color: var(--forest);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
 .dashboard-content {
   width: min(100%, 1000px);
   margin: 0 auto;
   padding: clamp(65px, 13vh, 130px) 0;
+}
+
+.settings-content {
+  width: min(100%, 920px);
+  margin: 0 auto;
+  padding: 54px 0 82px;
+}
+
+.settings-intro {
+  padding-bottom: 30px;
+}
+
+.settings-intro h1 {
+  margin: 0;
+  font-size: 38px;
+  font-weight: 450;
+  line-height: 1.1;
+}
+
+.settings-intro > p:last-child {
+  margin: 12px 0 0;
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.settings-section {
+  display: grid;
+  grid-template-columns: minmax(180px, 0.72fr) minmax(0, 1.28fr);
+  gap: 42px;
+  padding: 28px 0 32px;
+  border-top: 1px solid var(--line);
+}
+
+.settings-section-copy h2 {
+  margin: 0;
+  font-size: 17px;
+  font-weight: 650;
+}
+
+.settings-section-copy p {
+  max-width: 290px;
+  margin: 9px 0 0;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.settings-form {
+  display: grid;
+  gap: 16px;
+  width: 100%;
+  max-width: 540px;
+}
+
+.settings-help {
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 400;
+}
+
+.settings-submit {
+  width: fit-content;
+  min-width: 170px;
+}
+
+.settings-password-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.settings-danger {
+  border-top-color: #e6b6a8;
+}
+
+.settings-danger .settings-section-copy h2 {
+  color: #853b2a;
+}
+
+.danger-button {
+  background: #853b2a;
+}
+
+.danger-button:hover:not(:disabled) {
+  background: #6f2e21;
 }
 
 .dashboard-content h1 {
@@ -436,6 +544,25 @@ body {
 
   .auth-aside {
     display: none;
+  }
+
+  .settings-content {
+    padding: 38px 0 58px;
+  }
+
+  .settings-section {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+}
+
+@media (max-width: 520px) {
+  .settings-password-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .dashboard-actions {
+    gap: 14px;
   }
 }
 
